@@ -1,8 +1,8 @@
 class Openwith < Formula
   desc "Manage macOS file extension associations"
   homepage "https://github.com/ColeMei/openwith"
-  url "https://github.com/ColeMei/openwith/archive/refs/tags/v0.3.2.tar.gz"
-  sha256 "6ee460a2a4fecf467b11b88a2be80b1b954bb3ecb3240e72d0cd367810d3c010"
+  url "https://github.com/ColeMei/openwith/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "5db6021453e43018aa02a32434cf7db4a7756fbb1cf2f802a8c82b985205c02a"
   license "MIT"
 
   depends_on "rust" => :build
@@ -10,6 +10,9 @@ class Openwith < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+
+    generate_completions_from_executable(bin/"openwith", "completions")
+    (man1/"openwith.1").write Utils.safe_popen_read(bin/"openwith", "mangen")
   end
 
   test do
