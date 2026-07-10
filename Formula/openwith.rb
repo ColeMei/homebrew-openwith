@@ -1,8 +1,8 @@
 class Openwith < Formula
   desc "Manage macOS file extension associations"
   homepage "https://github.com/ColeMei/openwith"
-  url "https://github.com/ColeMei/openwith/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "ddc295ebba2903e8086f9db87e6fee18c2aab4c48d2722533df99df0173462ef"
+  url "https://github.com/ColeMei/openwith/archive/refs/tags/v0.5.1.tar.gz"
+  sha256 "85d78a675af0b5a2252027314582ee4cfa3f827aa429798b21e89b8dca99104e"
   license "MIT"
 
   depends_on "rust" => :build
