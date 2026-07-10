@@ -11,7 +11,7 @@ class Openwith < Formula
   def install
     # The repo root is a virtual cargo workspace; the CLI package lives in
     # crates/openwith-cli.
-    system "cargo", "install", *std_cargo_args, "--path", "crates/openwith-cli"
+    system "cargo", "install", *std_cargo_args(path: "crates/openwith-cli")
 
     generate_completions_from_executable(bin/"openwith", "completions")
     (man1/"openwith.1").write Utils.safe_popen_read(bin/"openwith", "mangen")
