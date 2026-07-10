@@ -8,7 +8,6 @@ cask "openwith" do
   homepage "https://github.com/ColeMei/openwith"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :ventura"
 
   app "OpenWith.app"
 
