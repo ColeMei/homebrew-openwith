@@ -1,4 +1,4 @@
-cask "openwith" do
+cask "openwith-gui" do
   version "0.5.1"
   sha256 "741f3f0267bb78d84d56a218946e04e896118486e5d54401e47b19bad126a8c6"
 
