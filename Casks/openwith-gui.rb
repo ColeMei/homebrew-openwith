@@ -21,10 +21,15 @@ cask "openwith-gui" do
   ]
 
   caveats <<~EOS
-    OpenWith is not signed with an Apple Developer ID yet. If macOS blocks
-    the first launch, either right-click OpenWith.app and choose Open, or
-    clear the quarantine flag:
+    OpenWith is not signed with an Apple Developer ID yet, so on first launch
+    macOS may claim the app "is damaged and can't be opened". It isn't; that
+    is Gatekeeper's message for unsigned apps (right-click > Open does not
+    bypass it). Clear the quarantine flag once and it launches normally:
 
       xattr -dr com.apple.quarantine /Applications/OpenWith.app
+
+    Or install with the quarantine flag disabled:
+
+      brew reinstall --cask --no-quarantine ColeMei/openwith/openwith-gui
   EOS
 end
