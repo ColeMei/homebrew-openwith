@@ -1,6 +1,6 @@
 cask "openwith-gui" do
-  version "0.5.4"
-  sha256 "3fc9917d0d83702f355e3481ed22844b01181431d84c6a0e7fd9e8985d5fc1ac"
+  version "0.6.0"
+  sha256 "cfa96afbd27e4b61e2b628cceca1ac79ba26e8cd99c2344d3903223088f884a4"
 
   url "https://github.com/ColeMei/openwith/releases/download/v#{version}/OpenWith_#{version}_aarch64.dmg"
   name "OpenWith"
