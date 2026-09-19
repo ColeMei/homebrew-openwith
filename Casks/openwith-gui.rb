@@ -1,6 +1,6 @@
 cask "openwith-gui" do
-  version "0.6.2"
-  sha256 "dfacb2a77bce90f6eca92430b45f819adba33dee6ac6c25fbd69d71075f0f2f8"
+  version "0.6.3"
+  sha256 "4b8776e833f5aae30f7afe5fc13c216713ad987982aeb33ce30567b20e935be8"
 
   url "https://github.com/ColeMei/openwith/releases/download/v#{version}/OpenWith_#{version}_aarch64.dmg"
   name "OpenWith"
@@ -13,6 +13,7 @@ cask "openwith-gui" do
   app "OpenWith.app"
 
   zap trash: [
+    "~/Library/Application Support/com.colemei.openwith",
     "~/Library/Application Support/openwith",
     "~/Library/Caches/com.colemei.openwith",
     "~/Library/Preferences/com.colemei.openwith.plist",
