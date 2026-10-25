@@ -7,6 +7,10 @@ cask "openwith-gui" do
   desc "GUI for managing file extension associations"
   homepage "https://github.com/ColeMei/openwith"
 
+  # From v0.7.0 the app updates itself in place ("Update to X…", signature-
+  # checked), so `brew upgrade` leaves it alone unless asked by name or with
+  # --greedy, rather than fighting the in-app updater.
+  auto_updates true
   depends_on arch: :arm64
   depends_on :macos
 
@@ -29,8 +33,9 @@ cask "openwith-gui" do
 
       xattr -dr com.apple.quarantine /Applications/OpenWith.app
 
-    Or install with the quarantine flag disabled:
-
-      brew reinstall --cask --no-quarantine ColeMei/openwith/openwith-gui
+    Updates install from inside the app: when a new release is out, choose
+    "Update to X…" (Settings, the menu-bar panel or the notice). Each update
+    is checked against OpenWith's signing key before it replaces the app.
+    `brew upgrade --cask openwith-gui` still works too.
   EOS
 end
